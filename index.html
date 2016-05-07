@@ -32,7 +32,7 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-app="ngAhoy">
 
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -99,21 +99,32 @@
     </section>
 
 
-    <section id="skills" class="container-fluid content-section">
+    <section id="skills" class="container-fluid content-section" ng-controller="skillsCtl">
         <div class="col-lg-8 col-lg-offset-2">
             <div class="row">
                   <h2 class="text-center">The HR Breakdown</h2>
-                  <table class="table table-inverse col-lg-8">
+                  <table class="table col-lg-8">
                     <tr scope="row">
                       <th class="col-lg-6 text-center thead-default">Technology</th>
                       <th class="col-lg-6 text-center thead-default">Experience</th>
                     </tr>
                     <tr scope="row">
-                      <td class="col-lg-6"><a target="_blank" href="https://en.wikipedia.org/wiki/JavaScript">Javascript</a></td>
+                      <td class="col-lg-6"><a href="" ng-click="jsSelected = !jsSelected">Javascript</a></td>
                       <td class="col-lg-5 col-lg-offset-1 text-right">3 Years</td></tr>
+                    <tr scope="row" ng-hide="jsSelected==false">
+                      <td colspan="2">I'm a big <a target="_blank" href="https://en.wikipedia.org/wiki/JavaScript">Javascript</a> proponent, it's hard to argue with the versatility.  </td>
+                    </tr>
                     <tr scope="row">
-                      <td class="col-lg-6"><a target="_blank" href="https://en.wikipedia.org/wiki/HTML5">HTML</a>/<a target="_blank" href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_3">CSS</a></td>
-                      <td class="col-lg-5 col-lg-offset-1 text-right">3 Years</td></tr>
+                      <td class="col-lg-6">
+                        <a href="" ng-click="htmlSelected = !htmlSelected">HTML</a>/
+                        <a href="" ng-click="cssSelected = !cssSelected">CSS</a>
+                      </td>
+                      <td class="col-lg-5 col-lg-offset-1 text-right">3 Years</td>
+                    </tr>
+
+                      <td colspan="2">I'm a big <a target="_blank" href="https://en.wikipedia.org/wiki/HTML5">HTML</a> proponent, it's hard to argue with the versatility.  </td>
+                    </tr>
+
                     <tr scope="row">
                       <td class="col-lg-6"><a target="_blank" href="http://getbootstrap.com/">Bootstrap</a></td>
                       <td class="col-lg-5 col-lg-offset-1 text-right">6 Months</td></tr>
@@ -175,11 +186,14 @@
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
 
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
+
+    <!--Begin Creativity -->
+    <script src="js/main.js"></script>
+
 
 </body>
 
