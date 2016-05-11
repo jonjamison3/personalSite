@@ -185,15 +185,15 @@
                 <p>Tilde thundercats cold-pressed meh crucifix tattooed. Meggings iPhone tousled mixtape, ugh blue bottle whatever next level echo park semiotics trust fund green juice hoodie shoreditch. Chicharrones master cleanse schlitz kitsch roof party kogi. Umami +1 plaid swag, vegan hoodie twee 8-bit mlkshk venmo organic lumbersexual. Lo-fi pork belly semiotics, quinoa occupy lomo ugh plaid beard gastropub helvetica yuccie deep v kale chips. Ennui skateboard before they sold out, venmo aesthetic YOLO cred ramps letterpress pork belly. Portland affogato mlkshk lumbersexual pour-over, pinterest bitters fap organic selfies.</p>
                 <p><a href="#">email@emailme.com</a>
                 </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                <ul class="list-inline banner-social-buttons" ng-controller="contactCtl">
+                    <li ng-show="!twitter">
+                        <a href="{{twitter}}" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                     </li>
-                    <li>
-                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    <li ng-show="github">
+                        <a href="{{github}}" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                     </li>
-                    <li>
-                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    <li ng-show="!google">
+                        <a href="{{google}}" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
                     </li>
                 </ul>
             </div>

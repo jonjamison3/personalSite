@@ -10,4 +10,9 @@ var app = angular.module('ngAhoy', [])
   $scope.nodeSelected=false;
   $scope.npmSelected=false;
   $scope.expressSelected=false;
+})
+.controller('contactCtl', function($scope){
+  $scope.twitter = false;
+  $scope.github = "https://www.github.com/jonjamison3";
+  $scope.google = false;
 });
