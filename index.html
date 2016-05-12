@@ -99,7 +99,82 @@
     </section>
 
 
-    <skills-table></skills-table>
+    <section id="skills" class="container-fluid content-section" ng-controller="skillsCtl">
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="row">
+                  <h2 class="text-center">The HR Breakdown</h2>
+                  <table class="table col-lg-8">
+                    <tr scope="row">
+                      <th class="col-lg-6 text-center thead-default">Technology</th>
+                      <th class="col-lg-6 text-center thead-default">Experience</th>
+                    </tr>
+                    <tr scope="row">
+                      <td class="col-lg-6"><a href="" ng-click="jsSelected = !jsSelected">Javascript</a></td>
+                      <td class="col-lg-5 col-lg-offset-1 text-right">3 Years</td>
+                    </tr>
+                    <tr scope="row" ng-hide="jsSelected==false">
+                      <td colspan="2">I'm a big <a target="_blank" href="https://en.wikipedia.org/wiki/JavaScript">Javascript</a> proponent, it's hard to argue with the versatility.  </td>
+                    </tr>
+
+                    <tr scope="row">
+                      <td class="col-lg-6">
+                        <a href="" ng-click="htmlSelected = !htmlSelected">HTML</a>/
+                        <a href="" ng-click="cssSelected = !cssSelected">CSS</a>
+                      </td>
+                      <td class="col-lg-5 col-lg-offset-1 text-right">3 Years</td>
+                    </tr>
+                    <tr scope="row" ng-hide="htmlSelected==false">
+                      <td colspan="2" >I believe <a target="_blank" href="https://en.wikipedia.org/wiki/HTML5">HTML</a> and HTML5 standards to be kind of a given, but hey, I'll give 'em to you.</td>
+                    </tr>
+                    <tr scope="row" ng-hide="cssSelected==false">
+                      <td colspan="2" >I'm no UX architect, but I can definitely <a target="_blank" href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_3">CSS3</a> my way out of a paper bag.</td>
+                    </tr>
+                    <tr scope="row">
+                      <td class="col-lg-6"><a href="" ng-click="bootstrapSelected = !bootstrapSelected">Bootstrap</a></td>
+                      <td class="col-lg-5 col-lg-offset-1 text-right">6 Months</td>
+                    </tr>
+                    <tr scope="row" ng-hide="bootstrapSelected==false">
+                      <td colspan="2"><a target="_blank" href="https://www.getbootstrap.com/">Bootstrap</a> saves me a lot of time, I like it a lot.</td>
+                    </tr>
+                    <tr scope="row">
+                      <td class="col-lg-6"><a href="" ng-click="jquerySelected = !jquerySelected">JQuery</a></td>
+                      <td class="col-lg-5 col-lg-offset-1 text-right">2 Years</td>
+                    </tr>
+                    <tr scope="row" ng-hide="jquerySelected==false">
+                      <td colspan="2"><a target="_blank" href="https://jquery.com/">jQuery</a> and <a target="_blank" href="https://en.wikipedia.org/wiki/Ajax_(programming)">AJAX</a> use is frequently essential for me.</td>
+                    </tr>
+                    <tr scope="row">
+                      <td class="col-lg-6"><a href="" ng-click="phpSelected = !phpSelected">PHP</a></td>
+                      <td class="col-lg-5 col-lg-offset-1 text-right">1 Year</td>
+                    </tr>
+                    <tr scope="row" ng-hide="phpSelected==false">
+                      <td colspan="2">While a little bit more mature in the current landscape, <a target="_blank" href="https://secure.php.net/">PHP</a>'s ubiquity and resources really impress.</td>
+                    </tr>
+                    <tr scope="row">
+                      <td class="col-lg-6"><a target="_blank" href="" ng-click="ngSelected = !ngSelected">Angular.js (1.x)</a></td>
+                      <td class="col-lg-5 col-lg-offset-1 text-right">6 months</td>
+                    </tr>
+                    <tr scope="row" ng-hide="ngSelected==false">
+                      <td colspan="2">Putting one foot in front of the other with <a target="_blank" href="https://angularjs.org/">Angular.js</a> has been both enjoyable and rewarding.</td>
+                    </tr>
+                    <tr scope="row">
+                      <td class="col-lg-6"><a target="_blank" href="" ng-click="nodeSelected = !nodeSelected">Node.js</a>, <a target="_blank" href="" ng-click="npmSelected = !npmSelected">npm</a>, <a target="_blank" href="" ng-click="expressSelected = !expressSelected">Express</a></td>
+                      <td class="col-lg-5 col-lg-offset-1 text-right">6 months</td>
+                    </tr>
+                    <tr scope="row" ng-hide="nodeSelected==false">
+                      <td colspan="2" >My tiny projects always seem best suited for <a target="_blank" href="https://nodejs.org/en/">Node.js</a>. Can't beat the speed or the dev environment.</td>
+                    </tr>
+                    <tr scope="row" ng-hide="npmSelected==false">
+                      <td colspan="2" >Not going to be doing anything MEAN without <a target="_blank" href="https://www.npmjs.com/">npm</a> anytime soon.</td>
+                    </tr>
+                    <tr scope="row" ng-hide="expressSelected==false">
+                      <td colspan="2" >The speed at which I can hit the ground running with <a target="_blank" href="http://expressjs.com/">Express</a> has been really exciting for me.</td>
+                    </tr>
+                  </table>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="container-fluid content-section text-center">
@@ -111,7 +186,7 @@
                 <p><a href="#">email@emailme.com</a>
                 </p>
                 <ul class="list-inline banner-social-buttons" ng-controller="contactCtl">
-                    <li ng-show="!twitter">
+                    <li ng-show="twitter">
                         <a href="{{twitter}}" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                     </li>
                     <li ng-show="github">
